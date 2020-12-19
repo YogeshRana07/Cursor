@@ -1,0 +1,77 @@
+*,*::after*,::before
+{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  padding: 3rem;
+  box-sizing: border-box;
+  background-color: black;
+  cursor: none;
+  margin: 0;
+  height: 100vh;
+}
+
+.heading
+{
+  display: inline-block;
+  text-overflow: clip;
+  width: 54rem;
+  padding: 1rem;
+  float: center;
+  position: absolute;
+  font-size: 5rem;
+  color:white;
+  left: 50%;
+  background:lightgreen;
+  transform: skew(-15deg) translate(-50%);
+}
+
+.cursor {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border: .4rem solid rgba(255, 255, 255, 0.623);
+  border-radius: 50%;
+}
+
+.cursor::before{
+  content: '';
+  position: absolute;
+  top: -.1rem;
+  left: -.1rem;
+  width: .5rem;
+  height: .5rem;
+  border: .4rem solid rgba(255, 255, 255, 0.301);
+  border-radius: 50%;
+  animation: animl .5s linear infinite;
+}
+
+/* animations section */
+@keyframes animl{
+  0%,100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+  }
+}
+
+.new {
+  animation: anim .5s forwards;
+  border: .4rem solid rgba(255, 0, 0, 0.692);
+}
+
+@keyframes anim {
+  0%,100% {
+    transform: scale(0);
+  }
+  50%{
+    transform: scale(1.5);
+  }
+}
